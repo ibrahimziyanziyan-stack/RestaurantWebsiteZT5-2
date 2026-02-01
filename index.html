@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link href="https://fonts.googleapis.com/css2?family=ZCOOL+XiaoWei&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      margin: 0;
+      height: 100vh;
+      background:
+        linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+        url("C:/v code/images/—Pngtree—black meat western food banner_1013905.jpg");
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+    }
+
+    .container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+
+    .container2 {
+      display: flex;
+      align-items: center;
+    
+      margin-top: 10px;
+    }
+
+    h1 {
+      margin: 0;
+      color: azure;
+      font-family: 'ZCOOL XiaoWei', serif;
+    }
+
+    h3 {
+      font-size: 15px;
+      color: azure;
+      font-family: 'ZCOOL XiaoWei', serif;
+    }
+
+    .input1 {
+      padding: 10px;
+      width: 180px;
+      border-radius: 50px;
+      margin: 0px;         
+    }
+    .input1::placeholder {
+      font-size: 12px;
+      color: brown;
+      font-weight: bold;
+      font-family: 'ZCOOL XiaoWei', serif;
+    }
+
+    .button1 {
+      width: 100px;
+      height: 37px;
+      border-radius: 30px;
+      outline: none;
+      background-color:#2563EB;
+      color: white;
+      font-weight: bolder;
+      
+    }
+    .button1:hover {
+ box-shadow: 
+        0 0 10px cyan,   
+        0 0 20px cyan,  
+        0 0 30px cyan,   
+        inset -2px -2px 10px cyan; 
+        background: transparent;
+        transform: scale(1.05);
+        transition: all 0.3s ease-in-out;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <h1>Welcome to ABC</h1>
+    <h3>Please enter your table number</h3>
+
+    <div class="container2">
+      <input type="text" class="input1" id="input1"placeholder="ENTER YOUR TABLE NO" required>
+      <button class="button1" onclick="rules()">Proceed</button>
+    </div>
+  </div>
+
+  <script>
+    function rules(){
+   let inp=document.getElementById("input1").value;
+    let num=Number(inp);
+    if(inp=="" ||isNaN(num)||inp==0){
+      alert("Are you dumb! pls enter a valid number");
+    }
+    if(num>0){
+      if(num>12){
+        alert("There are only max 12 table are there!");
+     }
+    }
+    else {
+       window.location.href="choose.html";
+      
+    }
+  }
+
+  </script>
+</body>
+</html>

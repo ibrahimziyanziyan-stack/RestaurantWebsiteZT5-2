@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>www.veg.com</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            background:
+                linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+                url("C:/v code/images/173765_00_2x.jpg");
+            background-size: cover;
+            padding: 10px 10px;
+            margin: 0;
+            min-height: 100vh;
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+
+        }
+
+        .transparent-effect {
+            height: 100vh;
+            width: 100%;
+            border-radius: 20px;
+            backdrop-filter: blur(4px);
+            -webkit-backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            padding: 10px 10px;
+            display: flex;
+            flex-direction: row;
+            gap: 10px;
+            justify-content: center;
+            position: absolute;
+            left: 30px;
+            flex-wrap: wrap;
+
+
+
+        }
+
+        .box1,
+        .box2,
+        .box3,
+        .box4,
+        .box5,
+        .box6,
+        .box7,
+        .box8,
+        .box9,
+        .box10,
+        .box11,
+        .box12 {
+            height: 200px;
+            width: 300px;
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(8px);
+            border: 1px solid rgb(252, 250, 250);
+            border-radius: 20px;
+            gap: 20px;
+            padding: 10px 10px;
+            transition: transform 0.5s ease-in-out;
+        }
+
+        .box1:active,
+        .box2:active,
+        .box3:active,
+        .box4:active,
+        .box5:active,
+        .box6:active,
+        .box7:active,
+        .box8:active,
+        .box9:active,
+        .box10:active,
+        .box11:active,
+        .box12:active {
+            transform: scale(0.95);
+        }
+
+        .box1 img,
+        .box2 img,
+        .box3 img,
+        .box4 img,
+        .box5 img,
+        .box6 img,
+        .box7 img,
+        .box8 img,
+        .box9 img,
+        .box10 img,
+        .box11 img,
+        .box12 img {
+            width: 100%;
+            height: 80%;
+            border-radius: 20px 20px 0px 20px;
+        }
+
+        p {
+            color: white;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+        }
+        /*popup form div  diff approach to center div*/
+        .popup{
+            height: 600px;
+            width: 300px;
+            background-color: azure;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            
+            padding: 10px 10px;
+            border-radius: 20px;
+            transition: all .2s ease-in-out;
+            opacity: 0;
+            
+
+            
+           
+            
+        }
+        .popup.animatepopup{
+          opacity: 1;
+        }
+        
+       .popupimg{
+            height: 60%;
+            width: 100%;
+            border: 3px solid black;
+            border-radius: 20px;     
+       }
+       .qtytxtpop{
+        color: black;
+        font-family: "Consolas", "Courier New", monospace;
+
+       }
+       .pricepop{
+        color: black;
+       font-family: "Consolas", "Courier New", monospace;
+
+
+       }
+       .stick{
+        color: black;
+        position: absolute;
+        bottom: 10px;
+        font-weight: bolder;
+
+       }
+       .btn{
+        border-radius: 20px;
+        position: absolute;
+        left: 60%;
+        bottom: 50px;
+        padding: 10px 10px;
+        background:
+        linear-gradient(to right,rgba(49, 84, 201, 0.6), rgba(224, 39, 184, 0.6));
+        transition: background-position 0.4s ease;
+        transition: transform 0.4s ease-in-out;
+        background-position: left;
+        background-size: 200% 80%;
+        color: black;
+        font-weight: bolder;
+
+
+       }
+       .btn:hover{
+        
+        background-position: right;
+        transform: scale(0.98);
+        border: none;
+
+       }
+       .btn1{
+        border-radius: 20px;
+        position: absolute;
+        left: 30%;
+        bottom: 50px;
+        padding: 10px 10px;
+        background:
+        linear-gradient(to right,rgba(49, 84, 201, 0.6), rgba(224, 39, 184, 0.6));
+        transition: background-position 0.4s ease;
+        transition: transform 0.4s ease-in-out;
+        background-position: left;
+        background-size: 200% 80%;
+        color: black;
+        font-weight: bolder;
+       }
+       .btn1:hover{
+        background-position: right;
+        transform: scale(0.98);
+        border: none;
+       }
+    </style>
+</head>
+
+<body>
+    <div class="transparent-effect">
+       <div class="box1" onclick="popupform('Paneer Butter Masala','https://images.pexels.com/photos/1117862/pexels-photo-1117862.jpeg',200)">
+  <img src="https://images.pexels.com/photos/1117862/pexels-photo-1117862.jpeg">
+  <p>Paneer Butter Masala</p>
+</div>
+
+<div class="box2" onclick="popupform('Vegetable Biryani','https://images.pexels.com/photos/5410401/pexels-photo-5410401.jpeg',399)">
+  <img src="https://images.pexels.com/photos/5410401/pexels-photo-5410401.jpeg">
+  <p>Vegetable Biryani</p>
+</div>
+
+<div class="box3" onclick="popupform('Veg Fried Rice','https://images.pexels.com/photos/1624487/pexels-photo-1624487.jpeg',679)">
+  <img src="https://images.pexels.com/photos/1624487/pexels-photo-1624487.jpeg">
+  <p>Veg Fried Rice</p>
+</div>
+
+<div class="box4" onclick="popupform('Masala Dosa','https://images.pexels.com/photos/5560763/pexels-photo-5560763.jpeg',877)">
+  <img src="https://images.pexels.com/photos/5560763/pexels-photo-5560763.jpeg">
+  <p>Masala Dosa</p>
+</div>
+
+<div class="box5" onclick="popupform('Chole Bhature','https://images.pexels.com/photos/4331489/pexels-photo-4331489.jpeg',155)">
+  <img src="https://images.pexels.com/photos/4331489/pexels-photo-4331489.jpeg">
+  <p>Chole Bhature</p>
+</div>
+
+<div class="box6" onclick="popupform('Veg Pulao','https://images.pexels.com/photos/461198/pexels-photo-461198.jpeg',100)">
+  <img src="https://images.pexels.com/photos/461198/pexels-photo-461198.jpeg">
+  <p>Veg Pulao</p>
+</div>
+
+<div class="box7" onclick="popupform('Palak Paneer','https://images.pexels.com/photos/376464/pexels-photo-376464.jpeg',149)">
+  <img src="https://images.pexels.com/photos/376464/pexels-photo-376464.jpeg">
+  <p>Palak Paneer</p>
+</div>
+
+<div class="box8" onclick="popupform('Veg Noodles','https://images.pexels.com/photos/2347311/pexels-photo-2347311.jpeg',300)">
+  <img src="https://images.pexels.com/photos/2347311/pexels-photo-2347311.jpeg">
+  <p>Veg Noodles</p>
+</div>
+
+<div class="box9" onclick="popupform('Vegetable Kurma','https://images.pexels.com/photos/958545/pexels-photo-958545.jpeg',200)">
+  <img src="https://images.pexels.com/photos/958545/pexels-photo-958545.jpeg">
+  <p>Vegetable Kurma</p>
+</div>
+
+<div class="box10" onclick="popupform('Aloo Gobi','https://images.pexels.com/photos/5560761/pexels-photo-5560761.jpeg',300)">
+  <img src="https://images.pexels.com/photos/5560761/pexels-photo-5560761.jpeg">
+  <p>Aloo Gobi</p>
+</div>
+
+<div class="box11" onclick="popupform('Veg Thali','https://images.pexels.com/photos/958547/pexels-photo-958547.jpeg',400)">
+  <img src="https://images.pexels.com/photos/958547/pexels-photo-958547.jpeg">
+  <p>Veg Thali</p>
+</div>
+
+<div class="box12" onclick="popupform('Veg Momos','https://images.pexels.com/photos/4110002/pexels-photo-4110002.jpeg',60)">
+  <img src="https://images.pexels.com/photos/4110002/pexels-photo-4110002.jpeg">
+  <p>Veg Momos</p>
+</div>
+
+
+    </div>
+
+    <div class="popup" id="popup" >
+      <img  class="popupimg" id="popupimg">
+      <p class="qtytxtpop" id ="qtytxtpop">Number of plates:<span id="qtyval">1</span></p>
+      <input type="range" id="qtyRange" min="1" max="5" value="1" oninput="document.getElementById('qtyval').innerText=this.value">
+      <p class="pricepop" >Price: <span id="priceval">0</span></p>
+      <button type="submit" class="btn" onclick="sucessespage()" >confirm order</button>
+      <button type="submit" class="btn1" onclick="samepage()" >order more</button>
+
+      <p class="stick">|||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||</p>
+    </div>
+    <script>
+      let baseprice=0;
+        function popupform(foodname,img,price) 
+        {
+          baseprice=price
+            const popup = document.getElementById("popup");
+            popup.style.display = "block";
+            document.getElementById("popupimg").src = img;
+
+            /*txt adding*/
+          const qtyVal = document.getElementById("qtyval");
+          const qtyRange = document.getElementById("qtyRange");
+           qtyRange.value = 1;
+           qtyVal.innerText = 1;
+          /*price*/
+          const priceVal = document.getElementById("priceval");
+          priceVal.innerText=baseprice;
+          /*price quamtity logic*/
+          qtyRange.oninput = () => {
+          qtyVal.innerText = qtyRange.value;
+          priceVal.innerText = qtyRange.value * baseprice;
+  };
+          /*adding new class to div (popup) class for animation*/
+            popup.classList.add("animatepopup");
+          }
+          /*button click next (sucesses page)*/
+        function sucessespage(){
+          window.location.href="sucess.html";
+        }
+        function samepage(){
+          window.location.href="veg.html";
+        }
+    </script>
+</body>
+
+</html>

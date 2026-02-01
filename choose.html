@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=ZCOOL+XiaoWei&display=swap" rel="stylesheet">
+    <title>wwwziyantoufeer.com</title>
+    <style>
+    body {
+  margin: 0;
+  min-height: 100vh;
+
+  background:
+    linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+    url("https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg");
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.box{
+  height: 400px;
+  width: 260px;
+  background-color: lightcyan;
+  border-radius: 20px;
+  padding: 10px 10px;
+  position: absolute;
+  left: 450px;
+  transition: transform 0.5s ease;
+}
+.img1{
+  height: 300px;
+  width: 260px;
+  border-radius: 10px;
+
+}
+.p1{
+  color: blue;
+ font-family: 'Courier New', Courier, monospace;
+ font-weight: bolder;
+ text-align: center;
+}
+/*second box*/
+.box1{
+  height: 400px;
+  width: 260px;
+  background-color: lightcyan;
+  border-radius: 20px;
+  padding: 10px 10px;
+  position: absolute;
+  left: 800px;
+  transition: all  0.5s ease;
+ 
+}
+.img2{
+  height: 300px;
+  width: 260px;
+  border-radius: 10px;
+
+}
+.p2{
+  color: blue;
+ font-family: 'Courier New', Courier, monospace;
+ font-weight: bolder;
+ text-align: center;
+}
+/*hovering effects*/
+.box:hover{
+  
+box-shadow: 
+        0 0 3px whitesmoke,   
+        0 0 3px whitesmoke,  
+        0 0 3px whitesmoke,   
+        inset -2px -2px 10px whitesmoke; 
+         cursor: pointer;
+}
+.box:active{
+  transform: scale(0.98);
+  border: 80px black;
+ 
+}
+.box1:hover{
+  
+box-shadow: 
+        0 0 3px whitesmoke,   
+        0 0 3px whitesmoke,  
+        0 0 3px whitesmoke,   
+        inset -2px -2px 10px whitesmoke; 
+         cursor: pointer;
+}
+.box1:active{
+  transform: scale(0.98);
+  border: 80px black;
+ 
+}
+
+</style>
+<body>
+    <div class="box" onclick="goNext()">
+      <img class="img1"src="C:/v code/images/vegetarian-sign-veg-logo-symbol-green-color-vector-50890046.avif" alt="">
+      <p class="p1">click for vegetarian-meal</p>
+    </div>
+    <div class="box1" onclick="goNext2()">
+      <img  class="img2"src="C:\v code\images\non-vegetarian-sign-veg-logo-symbol-red-color-written-food-grade-circle-312777265.webp" alt="">
+      <p class="p2">click for non vegetarian-meal</p>
+    </div>
+
+
+    <script>
+      function goNext(){
+        window.location.href="veg.html";
+      }
+      function goNext2(){
+        window.location.href="nonveg.html";
+      }
+      </script>
+</body>
+</html>
